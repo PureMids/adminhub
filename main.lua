@@ -3,6 +3,7 @@
 
 local lib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
 local win = lib:Window("Admin Hub | 6/23/23",Color3.fromRGB(70, 76, 77), Enum.KeyCode.RightControl)
+game:GetService("CoreGui"):FindFirstChild("ui").Name = "AdminHub"
 
 local admins = win:Tab("Admin")
 admins:Label("Note: some may have broken cmds due to RCD\n\n")
@@ -32,5 +33,5 @@ end)
 local additions = win:Tab("Addition")
 additions:Label("If you would like yours or someone elses admin\nadded, dm on discord @leakeddocuments")
 additions:Button("Delete GUI", function()
-	game:GetService("CoreGui").ui:Destroy()
+	game:GetService("CoreGui").AdminHub:Destroy()
 end)
